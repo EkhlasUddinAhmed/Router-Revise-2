@@ -1,0 +1,28 @@
+@import "../../scss/ScssComponents/mixins";
+
+
+.menue-bar-design{
+   @include gradient;
+    }
+
+.menue-bar-design li{
+ padding:10px 10px;
+}
+.menue-bar-design li a{
+    font-size: 24px;
+    color:darkblue;
+    font-weight: 600;
+    text-decoration: none;
+    padding:10px 15px;
+    transition: .6s;
+}
+.menue-bar-design li a:hover{
+    background-color: darkblue;
+    color:white !important;
+    border-radius: 10px;
+}
+.active{
+    background-color: darkblue;
+    color:white !important;
+    border-radius: 10px;
+}

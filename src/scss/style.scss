@@ -1,0 +1,21 @@
+$dark-grey:rgb(7, 136, 175);
+$light-grey:rgb(92, 152, 180);
+$dark-green:#0B666A;
+
+
+$primary:$dark-grey;
+$secondary:$light-grey;
+$info:$dark-green;
+
+
+$focus-ring-width:.10rem ;
+$border-radius:.370rem;
+
+// Import all of Bootstrap's CSS
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import "./custom";
+
+
+
+
