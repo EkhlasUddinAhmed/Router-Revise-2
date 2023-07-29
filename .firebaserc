@@ -1,0 +1,10 @@
+{
+  "projects": {
+    "default": "router-revise-2"
+  }
+}
+// {
+//   "projects": {
+//     "default": "<YOUR_FIREBASE_ID>"
+//   }
+// }

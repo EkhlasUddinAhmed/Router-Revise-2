@@ -9,6 +9,7 @@ import UserDetails from "../components/UserDetails/UserDetails";
 import LogIn from "../components/LogIn/LogIn";
 import Registration from "../components/Registration/Registration";
 import Protected from "../components/Protected/Protected";
+import Appointment from "../components/Appointment/Appointment";
 
 const router = createBrowserRouter([
     {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
        {
         path:"/register",
         element:<Registration></Registration>
+       },
+       {
+        path:"/appointment/:id",
+        element:<Appointment></Appointment>
        },
        
       ],

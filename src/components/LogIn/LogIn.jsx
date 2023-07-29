@@ -1,8 +1,13 @@
 import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/UserContext";
+import useTitle from "../../hooks/useTitle";
+
+
 
 const LogIn = () => {
+  
+  useTitle("Login");
   const {activeUser, setactiveUser,customUserLogIn,googleLogInHandler}=useContext(AuthContext);
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
@@ -12,6 +17,8 @@ const LogIn = () => {
   const navigate=useNavigate();
   const REDIRECT_URL=location.state?.from?.pathname || "/"
 
+
+  
 const logInHandler=(e)=>{
 e.preventDefault();
 const loggedUser={
@@ -25,7 +32,10 @@ customUserLogIn(userEmail,userPassword)
   const user = userCredential.user;
   setactiveUser(user);
   console.log("Custom Logged User is:",user);
-  navigate(REDIRECT_URL,{replace:true});
+  const email=user.email;
+  
+
+    navigate(REDIRECT_URL,{replace:true});
 })
 .catch((error) => {
   const errorCode = error.code;

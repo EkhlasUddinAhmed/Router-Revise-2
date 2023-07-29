@@ -48,9 +48,24 @@ const UserContext = ({ children }) => {
   useEffect(() => {
     const unSubsCribed = onAuthStateChanged(auth, (user) => {
       if (user) {
-        const uid = user.uid;
+        const email = user.email;
         setactiveUser(user);
         setLoading(false);
+        // .....................Fetching....
+  fetch('http://localhost:5000/user/jwt', {
+    method: 'POST',
+    body: JSON.stringify({email}),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) =>{
+      console.log(data);
+      localStorage.setItem("Token",data.token);
+      
+    } );
+
       } else {
         setactiveUser({});
         setLoading(false);

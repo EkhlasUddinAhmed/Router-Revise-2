@@ -1,7 +1,9 @@
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/UserContext";
+import useTitle from "../../hooks/useTitle";
 const Registration = () => {
+  useTitle("Register");
   const { createCustomUser } = useContext(AuthContext);
   const navigate=useNavigate();
   const [userName, setUserName] = useState("");

@@ -6,7 +6,7 @@ const getAllUserMethod=()=>{
 }
 const useAllUsers = () => {
     return useQuery({
-        queryKey: ['repoData'],
+        queryKey: ['Users'],
         queryFn: getAllUserMethod
           
     })

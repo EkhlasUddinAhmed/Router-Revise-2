@@ -10,6 +10,7 @@ const Header = () => {
     customSignOut()
     .then(() => {
       setactiveUser({});
+      localStorage.removeItem("Token");
      }).catch((error) => {
        // An error happened.
      });

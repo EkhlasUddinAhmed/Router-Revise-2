@@ -1,10 +1,11 @@
 import React from 'react';
 import useAllUsers from '../../hooks/useAllUsers';
 import UserCard from '../UserCard/UserCard';
+import useTitle from '../../hooks/useTitle';
 
 
 const Products = () => {
-
+  useTitle("Product");
   const {isLoading,isError,error,data}=useAllUsers();
 
    
