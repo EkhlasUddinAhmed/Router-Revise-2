@@ -5,12 +5,12 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../components/Context/UserContext";
 
 const addAppointmentMethod = (newAppointment) => {
-  return axios.post("http://localhost:5000/user", newAppointment);
+  return axios.post("https://router-revise-2-server.vercel.app/user", newAppointment);
 };
 
 const getAllAppointMentMethod = ({ queryKey }) => {
   const email = queryKey[1];
-  return axios.get(`http://localhost:5000/user/all?email=${email}`,{
+  return axios.get(`https://router-revise-2-server.vercel.app/user/all?email=${email}`,{
     headers:{
         'authorization':`Bearer ${localStorage.getItem("Token")}`
     }
@@ -38,7 +38,7 @@ export const useAddAppointment = () => {
 };
 
 const deleteAppointmentHandler = (deleteID) => {
-  return axios.delete(`http://localhost:5000/user/${deleteID}`);
+  return axios.delete(`https://router-revise-2-server.vercel.app/user/${deleteID}`);
 };
 export const useDeleteAppointment = () => {
   const queryClient = useQueryClient();

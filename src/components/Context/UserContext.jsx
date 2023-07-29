@@ -52,7 +52,7 @@ const UserContext = ({ children }) => {
         setactiveUser(user);
         setLoading(false);
         // .....................Fetching....
-  fetch('http://localhost:5000/user/jwt', {
+  fetch('https://router-revise-2-server.vercel.app/user/jwt', {
     method: 'POST',
     body: JSON.stringify({email}),
     headers: {

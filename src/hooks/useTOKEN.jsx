@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 const createAccessToken=(loggedUser)=>{
-    return axios.post(`http://localhost:5000/user/jwt`,loggedUser)
+    return axios.post(`https://router-revise-2-server.vercel.app/user/jwt`,loggedUser)
 }
 const useTOKEN = () => {
     return useMutation({
